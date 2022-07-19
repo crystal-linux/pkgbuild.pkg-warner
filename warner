@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Source: https://stackoverflow.com/a/36625843
+texec=$(echo $0 $*)
+
+if [[ $texec == *"pkg-warner"* ]]; then
+    echo "This command is meant to be run via symlink"
+else
+    echo "On Crystal, we don't use '$texec', we use 'ame'"
+    echo "For more specific usage information, see 'ame help'"
+fi
