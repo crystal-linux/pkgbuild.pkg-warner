@@ -10,7 +10,7 @@ provides=($pkgname)
 conflicts=($pkgname)
 depends=('bash')
 source=('warner')
-md5sums=('SKIP')
+md5sums=('02ce7e9e8c29c3d110ca2280ac1cdfcf')
 
 package() {
   chmod +x warner
