@@ -8,3 +8,10 @@ post_install() {
 post_upgrade() {
     post_install
 }
+
+post_remove() {
+   for x in apt apt-get zypper dnf eopkg apk; do
+        rm -f /usr/bin/$x
+        echo "removed the link to $x"
+    done 
+}
