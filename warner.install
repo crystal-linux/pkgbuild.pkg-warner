@@ -1,0 +1,10 @@
+post_install() {
+    for x in apt apt-get zypper dnf eopkg apk; do
+        ln -s /usr/bin/pkg-warner /usr/bin/$x
+        echo "linked to $x"
+    done
+}
+
+post_upgrade() {
+    post_install
+}
